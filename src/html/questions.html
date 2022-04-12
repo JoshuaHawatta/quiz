@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+  <meta charset='UTF-8' />
+  <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>Quiz</title>
+</head>
+<body>
+  <form method='POST' name='quiz' id='my-form'>
+    <section class='question-section'>
+      <h1 id='question'></h1>
+      <img class='quiz-img' id='img1' alt='imagem quiz.' />
+    </section>
+
+    <label for='a' class='labels'>
+      <input type='radio' name='radio' id='a' value='a' class='rad btn' /> 
+      <p class='parag' id='p1'>option</p>
+    </label>
+    <br />
+
+    <label for='b' class='labels'>
+      <input type='radio' name='radio' id='b' value='b' class='rad btn' /> 
+      <p class='parag' id='p2'>option</p>
+    </label>
+    <br />
+
+    <label for='c' class='labels'>
+      <input type='radio' name='radio' id='c' value='c' class='rad btn' /> 
+      <p class='parag' id='p3'>option</p>
+    </label>
+    <br />
+
+    <input type='button' id='next-btn' class='next-question-btn' value='Próximo' />
+  </form>
+
+  <footer class='my-footer'>
+    <p class='footer-paragraph'>Criado por Joshua Hawatta.</p>
+  </footer>
+
+<script src='../js/main.js' type='module'></script>
+</body>
+</html>

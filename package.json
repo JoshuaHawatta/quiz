@@ -1,0 +1,11 @@
+{
+  "type": "module",
+
+  "jest": {
+    "transform": {}
+  },
+
+  "devDependencies": { "jest": "^27.5.1" },
+
+  "scripts": { "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --watch" }
+}

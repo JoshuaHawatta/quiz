@@ -1,0 +1,158 @@
+@font-face {
+    font-family: "quickSand";
+    src: url("../../fontes/Quicksand-Regular.ttf");
+}
+@font-face {
+    font-family: "overPass";
+    src: url("../../fontes/Overpass-ExtraBold.ttf");
+}
+@font-face {
+    font-family: "Urbanist";
+    src: url("../../fontes/Urbanist-VariableFont_wght.ttf");
+}
+
+html {
+    font-size: 62.5%;
+}
+body {
+    background-color: #2a9df4;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    transition: 0.3s ease;
+}
+
+.defaultColor {
+    background-color: #2a9df4;
+}
+.rightAnswerColor {
+    background-color: #90EE90;
+}
+.wrongAnswerColor {
+    background-color: #C21807;
+}
+/*defaultColor, rightAnswer and wrongAnswer are for JavaScript change dinamicly.*/
+/* My principal parts lies above... */
+
+#h1Quest {
+    font-family: "overPass", sans-serif;
+    font-size: 4rem;
+    text-align: center;
+    color: #FFFFFF; 
+    margin: 0;
+    padding: 0.5rem;
+}
+
+.imageSection {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 1rem;
+    padding: 3rem 1rem;
+    margin: 0.5rem 0.5rem;
+}
+
+.quizImg {
+    width: 40rem;
+    box-shadow: 0.5rem 0.5rem 1rem #000000;
+    border-radius: 3rem;
+}
+/* My first h1, section and images lies above... */
+
+#myForm {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+}
+
+.labels {
+    display: flex;
+    flex-direction: row;
+    background-color: #e8ecf1;
+    border-radius: 3rem;
+    width: 35rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    box-shadow: 0.3rem 0.4rem 0.1rem #222b3f;
+}
+.labels:hover {
+    width: 39rem;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.rad {
+    display: none;
+}
+
+.parag {
+    font-family: "quickSand", arial, sans-serif;
+    font-size: 2rem;
+}
+
+.subBtnSection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.btnSub {
+    width: 35rem;
+    color: #FFFFFF;
+    font-family: "quickSand", arial, sans-serif;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    background: none;
+    border-radius: 3rem;
+    border: 0.3rem solid #FFFFFF;
+    transition: 0.3s ease;
+}
+.btnSub:hover {
+    width: 40rem;
+    background-color: #FFFFFF;
+    color: #000000;
+    cursor: pointer;
+}
+/* My form, labels, radios and buttons lies above... */
+
+.lastH1 {
+    font-family: "overPass", sans-serif;
+    font-size: 5rem;
+    text-align: center;
+    color: #FFFFFF; 
+    margin: 0;
+    padding: 3rem 0.5rem;
+}
+
+.lastP {
+    font-family: "Urbanist", sans-serif;
+    font-size: 5rem;
+    text-align: center;
+    color: #FFFFFF; 
+    margin: 0;
+    padding: 8rem 0.5rem;
+}
+/* My final quiz elements lies above... */
+
+.myFooter {
+    background-color: #222b3f;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.footerP {
+    color: #FFFFFF;
+    font-size: 2rem;
+    font-family: "quickSand", sans-serif;
+}
+/* My footer elemnts lies above... */
