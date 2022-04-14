@@ -1,7 +1,7 @@
 import { counters, originalCounters } from '../js/counters.js';
 import { jest } from '@jest/globals';
 
-describe('testing counters', () => {
+describe('testing counters...', () => {
   test('should return the first counter value as 0', () => {
     expect(originalCounters().counter).toBe(0)
   })
@@ -33,7 +33,7 @@ describe('testing counters', () => {
   })
 });
 
-describe('testing counters methods', () => {
+describe('testing counters methods...', () => {
   beforeEach(() => {
     console.log("RESETANDO_CONTADORES...");
     counters.counter = 0;
