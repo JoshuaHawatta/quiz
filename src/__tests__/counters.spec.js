@@ -1,4 +1,4 @@
-import { originalCounters } from '../js/counters.js';
+import originalCounters from '../js/counters.js';
 import { jest } from '@jest/globals';
 
 const counters = originalCounters();
