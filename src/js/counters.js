@@ -1,14 +1,14 @@
-export const originalCounters = (setCounterValue = 0) => {
-  const counters = {
+const originalCounters = (setCounterValue = 0) => {
+  const counterInstance = {
     counter: setCounterValue, 
     rightAnswerCounter: 0,
     
-    incrementCounter: () => ++counters.counter,
-    incrementRightAnswerCounter: () => ++counters.rightAnswerCounter,
-    updateScores: () => counters.counter - counters.rightAnswerCounter
+    incrementCounter: () => ++counterInstance.counter,
+    incrementRightAnswerCounter: () => ++counterInstance.rightAnswerCounter,
+    updateScores: () => counterInstance.counter - counterInstance.rightAnswerCounter
   }
   
-  return counters;
+  return counterInstance;
 }
 
-export const counters = originalCounters();
+export default originalCounters;
