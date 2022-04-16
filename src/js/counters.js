@@ -1,11 +1,11 @@
-const originalCounters = (setCounterValue = 0) => {
+const originalCounters = () => {
   const counterInstance = {
-    counter: setCounterValue, 
+    counter: 0, 
     rightAnswerCounter: 0,
     
     incrementCounter: () => ++counterInstance.counter,
     incrementRightAnswerCounter: () => ++counterInstance.rightAnswerCounter,
-    updateScores: () => counterInstance.counter - counterInstance.rightAnswerCounter
+    showResults: () => counterInstance.rightAnswerCounter
   }
   
   return counterInstance;

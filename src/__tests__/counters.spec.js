@@ -3,15 +3,15 @@ import { jest } from '@jest/globals';
 
 const counters = originalCounters();
 
-describe('testing counters...', () => {
+describe('TESTING_COUNTERS...', () => {
   afterAll(() => jest.resetAllMocks());
 
   test('originalCounters should be a object', () => {
-    expect(originalCounters).toBeInstanceOf(Object);
+    expect(originalCounters).toBeInstanceOf(Object)
   });
 
   test('counters should be a object', () => {
-    expect(counters).toBeInstanceOf(Object);
+    expect(counters).toBeInstanceOf(Object)
   });
 
   test('should return the first counter value as 0', () => {
@@ -20,12 +20,6 @@ describe('testing counters...', () => {
 
   test('should return the second counter value as 0', () => {
     expect(originalCounters().rightAnswerCounter).toBe(0)
-  });
-
-  test('should be able to set the first counter value in parameters', () => {
-    const mockedFunction = jest.fn();
-    mockedFunction.mockReturnValue([1 ,2, 3, 4]);
-    expect(originalCounters( mockedFunction().length ).counter).toBe(4)
   });
   
   test('counters and originalCounters should NOT be the same instance', () => {
@@ -45,10 +39,8 @@ describe('testing counters...', () => {
   })
 });
 
-describe('testing counters methods...', () => {
-
+describe('TESTING_COUNTER_METHODS...', () => {
   beforeEach(() => {
-    console.log("RESETANDO_CONTADORES...");
     counters.counter = 0;
     counters.rightAnswerCounter = 0
   });
@@ -61,11 +53,10 @@ describe('testing counters methods...', () => {
     expect(counters.incrementRightAnswerCounter()).toBe(1)
   });
 
-  test('should calculate the counter minous right answers counter', () => {
-    counters.incrementCounter(); //1
-    counters.incrementCounter(); //2
-    counters.incrementRightAnswerCounter(); //1
-    expect(counters.updateScores()).toBe(1)
+  test('should return the number of right answers', () => {
+    counters.incrementRightAnswerCounter();
+    counters.incrementRightAnswerCounter();
+    expect(counters.showResults()).toBe(2)
   });
 
   test('should be able to increment the counter as long as I want', () => {
