@@ -2,7 +2,7 @@ const questions = [
   {
     question: 'Quem inventou o Javascript?',
     options: ['Apple', 'Netscape', 'Google'],
-    answer: 'Netscape',
+    answer: 'b',
     img: '../assets/images/img-one.jpg'
   },
 
@@ -13,21 +13,21 @@ const questions = [
       'Claro, ele era o criador da empresa.', 
       'A Apple não faz computadores.'
     ],
-    answer: 'Quem fez isso foi Steve Wozniak.',
+    answer: 'a',
     img: '../assets/images/img-two.png'
   },
 
   {
     question: 'Qual foi a empresa que criou o React.js?',
     options: ['Microsoft.', 'Uber.', 'Facebook.'],
-    answer: 'Facebook.',
+    answer: 'c',
     img: '../assets/images/img-three.png'
   },
   
   {
     question: 'Quais são os níveis de experiência na programação?',
     options: ['Júnior, Pleno, Sênior.', 'CEO, Sênior, Pleno.', 'Estagiário, Pleno, Júnior.'],
-    answer: 'Júnior, Pleno, Sênior.',
+    answer: 'a',
     img: '../assets/images/img-four.jpg'
   }
 ];
