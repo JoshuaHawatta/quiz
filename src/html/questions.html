@@ -5,37 +5,42 @@
   <meta http-equiv='X-UA-Compatible' content='IE=edge' />
   <meta name='viewport' content='width=device-width, initial-scale=1.0' />
   <title>Quiz</title>
+  <link rel='stylesheet' type='text/css' href='../css/questions.css' />
 </head>
-<body>
+<body class='right-answer-background wrong-answer-background'>
   <form method='POST' name='quiz' id='my-form'>
+
     <section class='question-section'>
-      <h1 id='question'></h1>
       <img class='quiz-img' id='img' alt='imagem quiz.' />
+      <h1 id='question'></h1>
     </section>
 
-    <label for='a' class='labels'>
-      <input type='radio' name='radio' id='a' value='a' class='radios' /> 
-      <p class='parag' id='p1'>option</p>
-    </label>
-    <br />
+    <div class='all-labels'>
 
-    <label for='b' class='labels'>
-      <input type='radio' name='radio' id='b' value='b' class='radios' /> 
-      <p class='parag' id='p2'>option</p>
-    </label>
-    <br />
+      <label for='a' class='labels'>
+        <input type='radio' name='radio' id='a' value='a' class='radios' /> 
+        <p class='parag' id='p1'>option</p>
+      </label>
+  
+      <label for='b' class='labels'>
+        <input type='radio' name='radio' id='b' value='b' class='radios' /> 
+        <p class='parag' id='p2'>option</p>
+      </label>
+  
+      <label for='c' class='labels'>
+        <input type='radio' name='radio' id='c' value='c' class='radios' /> 
+        <p class='parag' id='p3'>option</p>
+      </label>
+      
+    </div>
 
-    <label for='c' class='labels'>
-      <input type='radio' name='radio' id='c' value='c' class='radios' /> 
-      <p class='parag' id='p3'>option</p>
-    </label>
-    <br />
-
-    <button id='next-btn' class='next-question-btn'>Escolha uma resposta.</button>
+    <div class='next-question-div'>
+      <button id='next-btn' class='next-question-btn'>Choose an answer</button>
+    </div>
   </form>
 
   <footer class='my-footer'>
-    <p class='footer-paragraph'>Criado por Joshua Hawatta.</p>
+    <p class='footer-paragraph'>Made by: Joshua Hawatta.</p>
   </footer>
 
 <script src='../js/main.js' type='module'></script>

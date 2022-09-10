@@ -1,6 +1,7 @@
 import questions from './questions.js';
 import { counters } from './main.js';
 
+const body = document.querySelector('body');
 const nextQuestionButton = document.querySelector('#next-btn');
 const answerOptions = document.querySelectorAll('.radios');
 
@@ -27,14 +28,17 @@ const handleChoosenAnswer = () => {
 
     if(element.value === questions[counters.counter].answer) {
       counters.incrementRightAnswerCounter();
+      body.classList.add('right-answer-background');
       changeRadioAttributes();
-      nextQuestionButton.textContent = invertDisabledAttribute()
+      nextQuestionButton.textContent = invertDisabledAttribute();
+
       return
     }
-    
+
+    body.classList.add('wrong-answer-background');
     changeRadioAttributes();
     nextQuestionButton.textContent = invertDisabledAttribute()
   }))
 }
 
-export default handleChoosenAnswer;
+export default handleChoosenAnswer

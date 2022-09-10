@@ -1,158 +1,137 @@
 @font-face {
-    font-family: "quickSand";
-    src: url("../../fontes/Quicksand-Regular.ttf");
+  font-family: 'Quicksand';
+  src: url('../assets/fonts/Quicksand-Regular.ttf');
 }
 @font-face {
-    font-family: "overPass";
-    src: url("../../fontes/Overpass-ExtraBold.ttf");
+  font-family: "Overpass";
+  src: url("../assets/fonts/Overpass-ExtraBold.ttf");
 }
 @font-face {
-    font-family: "Urbanist";
-    src: url("../../fontes/Urbanist-VariableFont_wght.ttf");
+  font-family: "Urbanist";
+  src: url("../assets/fonts/Urbanist-VariableFont_wght.ttf");
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
+
+/*CHANGE_BACKGROUND_ON_JAVASCRIPT.*/
+:root{
+  --blueBackGround: #2a9df4;
+  --greenBackGround: #3ddb45;
+  --redBackGround: #C21807;
+}
+
+/*LAPTOP_SCREEN_SIZE...*/
 body {
-    background-color: #2a9df4;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    transition: 0.3s ease;
+  background-color: var(--blueBackGround);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.3s ease;
 }
 
-.defaultColor {
-    background-color: #2a9df4;
-}
-.rightAnswerColor {
-    background-color: #90EE90;
-}
-.wrongAnswerColor {
-    background-color: #C21807;
-}
-/*defaultColor, rightAnswer and wrongAnswer are for JavaScript change dinamicly.*/
-/* My principal parts lies above... */
-
-#h1Quest {
-    font-family: "overPass", sans-serif;
-    font-size: 4rem;
-    text-align: center;
-    color: #FFFFFF; 
-    margin: 0;
-    padding: 0.5rem;
+.right-answer-background {
+  background-color: var(--greenBackGround); 
 }
 
-.imageSection {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    padding-top: 1rem;
-    padding: 3rem 1rem;
-    margin: 0.5rem 0.5rem;
+.wrong-answer-background {
+  background-color: var(--redBackGround); 
 }
 
-.quizImg {
-    width: 40rem;
-    box-shadow: 0.5rem 0.5rem 1rem #000000;
-    border-radius: 3rem;
+.question-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
-/* My first h1, section and images lies above... */
 
-#myForm {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    flex-wrap: wrap;
-    text-align: center;
-    align-items: center;
+.question-section > img {
+  margin: 2rem 0;
+  width: 50rem;
+  height: 30rem;
+  border-radius: 3rem;
+  box-shadow: -3rem 1rem 6rem rgba(0, 0, 0, 0.4);
+}
+
+.question-section > h1 {
+  font: 4rem 'Overpass', Arial, sans-serif;
+  margin: 4.5rem 0;
+  color: #FFFFFF;
+}
+
+.all-labels {
+  display: flex;
 }
 
 .labels {
-    display: flex;
-    flex-direction: row;
-    background-color: #e8ecf1;
-    border-radius: 3rem;
-    width: 35rem;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    transition: 0.3s ease;
-    box-shadow: 0.3rem 0.4rem 0.1rem #222b3f;
-}
-.labels:hover {
-    width: 39rem;
-    background-color: #FFFFFF;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
 }
 
-.rad {
-    display: none;
+.labels > .radios {
+  display: none;
 }
 
-.parag {
-    font-family: "quickSand", arial, sans-serif;
-    font-size: 2rem;
+.labels > .radios + p {
+  margin: 0 1rem 4rem 1rem;
+  font: 3.5rem 'Quicksand', Arial, sans-serif;
+  transition: all 0.2s ease;
+  padding: 1rem 3rem;
+  border-radius: 3rem;
+  color: #000000;
+  background-color: #e9dbdb;
 }
 
-.subBtnSection {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.labels > .radios + p:hover {
+  cursor: pointer;
+  background-color: #FFFFFF;
 }
 
-.btnSub {
-    width: 35rem;
-    color: #FFFFFF;
-    font-family: "quickSand", arial, sans-serif;
-    padding: 0.5rem;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    background: none;
-    border-radius: 3rem;
-    border: 0.3rem solid #FFFFFF;
-    transition: 0.3s ease;
-}
-.btnSub:hover {
-    width: 40rem;
-    background-color: #FFFFFF;
-    color: #000000;
-    cursor: pointer;
-}
-/* My form, labels, radios and buttons lies above... */
-
-.lastH1 {
-    font-family: "overPass", sans-serif;
-    font-size: 5rem;
-    text-align: center;
-    color: #FFFFFF; 
-    margin: 0;
-    padding: 3rem 0.5rem;
+.next-question-div {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 2.5rem 0;
 }
 
-.lastP {
-    font-family: "Urbanist", sans-serif;
-    font-size: 5rem;
-    text-align: center;
-    color: #FFFFFF; 
-    margin: 0;
-    padding: 8rem 0.5rem;
-}
-/* My final quiz elements lies above... */
-
-.myFooter {
-    background-color: #222b3f;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    text-align: center;
-    padding: 0.5rem;
+.next-question-btn {
+  font: 2.5rem 'Quicksand', Arial, sans-serif;
+  background: none;
+  border: none;
 }
 
-.footerP {
-    color: #FFFFFF;
-    font-size: 2rem;
-    font-family: "quickSand", sans-serif;
+.next-question-btn:hover {
+  cursor: pointer;
 }
-/* My footer elemnts lies above... */
+
+.my-footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #1c1c55;
+}
+
+.my-footer > p {
+  color: #FFFFFF;
+  font: 2.5rem 'Urbanist', Arial, sans-serif;
+}
+
+.quiz-end-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.quiz-end-div > p {
+  font: 5.5rem 'Overpass', Arial, sans-serif;
+  color: #FFFFFF;
+}
+
+/*DESKTOP_SCREEN_SIZE...*/
+
+/*TODO: I_ONLY_NEED_TO_CHANGE_THE_WIDTHS_OF_IMAGES_OR_FONTS_OND_THE_MEDIA_QUERYS... */

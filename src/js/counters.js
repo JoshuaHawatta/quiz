@@ -9,7 +9,7 @@ const counterInstance = () => {
     resetCounters: () => (originalCounters.counter = 0, originalCounters.rightAnswerCounter = 0)
   }
   
-  return originalCounters;
+  return originalCounters
 }
 
-export default counterInstance;
+export default counterInstance

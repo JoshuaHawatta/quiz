@@ -11,6 +11,7 @@ const answerOptions = document.querySelectorAll('.radios');
 const nextQuestionButton = document.querySelector('#next-btn');
 
 const actualQuestion = () => {
+  body.classList.remove('right-answer-background', 'wrong-answer-background');
   nextQuestionButton.textContent = invertDisabledAttribute();
 
   questionTitle.textContent = questions[counters.counter].question;
@@ -18,10 +19,13 @@ const actualQuestion = () => {
   questions[counters.counter].options.map((option, index) => answers[index].textContent = option)
 }
 
-const finish = () => body.innerHTML = `
-  <div className='quiz-end-div'>
-    <p>Você acertou ${counters.showResults()} perguntas!</p>
-  </div>`
+const finish = () => {
+  body.classList.remove('right-answer-background', 'wrong-answer-background');
+  body.innerHTML = `
+    <div class='quiz-end-div'>
+      <p>Você acertou ${counters.showResults()} perguntas!</p>
+    </div>`
+}
 
 const continueOrEndQuiz = () => counters.counter !== questions.length ? actualQuestion() : finish();
 
@@ -32,4 +36,4 @@ nextQuestionButton.addEventListener('click', () => {
 })
 
 actualQuestion();
-handleChoosenAnswer();
+handleChoosenAnswer()

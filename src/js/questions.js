@@ -1,35 +1,31 @@
 const questions = [
   {
-    question: 'Quem inventou o Javascript?',
+    question: 'Who created JavaScript?',
     options: ['Apple', 'Netscape', 'Google'],
     answer: 'b',
     img: '../assets/images/img-one.jpg'
   },
 
   {
-    question: 'Steve Jobs criou o primeiro computador Apple.',
-    options: [
-      'Quem fez isso foi Steve Wozniak.', 
-      'Claro, ele era o criador da empresa.', 
-      'A Apple não faz computadores.'
-    ],
+    question: 'Who invented the first Apple computer?',
+    options: ['Steve Wozniak', 'Mike Zuckerberg', 'Bill Gates'],
     answer: 'a',
     img: '../assets/images/img-two.png'
   },
 
   {
-    question: 'Qual foi a empresa que criou o React.js?',
-    options: ['Microsoft.', 'Uber.', 'Facebook.'],
+    question: 'The company who created React.js is...',
+    options: ['Microsoft', 'Uber', 'Facebook'],
     answer: 'c',
     img: '../assets/images/img-three.png'
   },
   
   {
-    question: 'Quais são os níveis de experiência na programação?',
-    options: ['Júnior, Pleno, Sênior.', 'CEO, Sênior, Pleno.', 'Estagiário, Pleno, Júnior.'],
+    question: 'The coders hierarchy',
+    options: ['Junior, Intermediate, Senior', 'CEO, Senior, Intermediate', 'Senior, Junior, CEO'],
     answer: 'a',
     img: '../assets/images/img-four.jpg'
   }
 ];
 
-export default questions;
+export default questions
