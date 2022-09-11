@@ -22,7 +22,7 @@ const questions = [
   
   {
     question: 'The coders hierarchy',
-    options: ['Junior, Intermediate, Senior', 'CEO, Senior, Intermediate', 'Senior, Junior, CEO'],
+    options: ['Junior, Intermediate, Senior', 'CEO, Senior, Junior', 'Intermediate, Junior, CEO'],
     answer: 'a',
     img: '../assets/images/img-four.jpg'
   }

@@ -5,15 +5,9 @@ const body = document.querySelector('body');
 const nextQuestionButton = document.querySelector('#next-btn');
 const answerOptions = document.querySelectorAll('.radios');
 
-export const invertDisabledAttribute = () => {
-  if(!nextQuestionButton.disabled) {
-    nextQuestionButton.disabled = true;
-    return 'Escolha uma resposta.'
-  }
-
-  nextQuestionButton.disabled = false;
-  return 'Próxima pergunta!'
-}
+export const invertDisabledAttribute = () => nextQuestionButton.disabled 
+    ? (nextQuestionButton.disabled = false, 'Next Question')
+    : (nextQuestionButton.disabled = true, 'Choose an answer.')
 
 export const changeRadioAttributes = () => {
   answerOptions.forEach(option => {
@@ -29,9 +23,10 @@ const handleChoosenAnswer = () => {
     if(element.value === questions[counters.counter].answer) {
       counters.incrementRightAnswerCounter();
       body.classList.add('right-answer-background');
-      changeRadioAttributes();
-      nextQuestionButton.textContent = invertDisabledAttribute();
 
+      changeRadioAttributes();
+
+      nextQuestionButton.textContent = invertDisabledAttribute();
       return
     }
 

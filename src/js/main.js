@@ -9,31 +9,36 @@ const image = document.querySelector('#img');
 const answers = document.querySelectorAll('.parag');
 const answerOptions = document.querySelectorAll('.radios');
 const nextQuestionButton = document.querySelector('#next-btn');
+const restartQuizButton = document.querySelector('.restart-quiz-button');
 
-const actualQuestion = () => {
+const updateQuestion = () => {
   body.classList.remove('right-answer-background', 'wrong-answer-background');
-  nextQuestionButton.textContent = invertDisabledAttribute();
 
+  nextQuestionButton.textContent = invertDisabledAttribute();
   questionTitle.textContent = questions[counters.counter].question;
   image.src = questions[counters.counter].img;
-  questions[counters.counter].options.map((option, index) => answers[index].textContent = option)
+
+  questions[counters.counter].options.map((option, index) => answers[index].textContent = option);
 }
 
 const finish = () => {
   body.classList.remove('right-answer-background', 'wrong-answer-background');
   body.innerHTML = `
-    <div class='quiz-end-div'>
-      <p>Você acertou ${counters.showResults()} perguntas!</p>
+    <div class='end-quiz-div'>
+      <p>You answered ${ counters.showResults() } right questions!</p>
+      <button onclick="window.location.reload()">Click here to restart the quiz!</button>
     </div>`
 }
 
-const continueOrEndQuiz = () => counters.counter !== questions.length ? actualQuestion() : finish();
+const continueOrEndQuiz = () => counters.counter < questions.length ? updateQuestion() : finish();
+
+updateQuestion();
+handleChoosenAnswer();
+
+console.log(restartQuizButton)
 
 nextQuestionButton.addEventListener('click', () => {
   counters.incrementCounter();
-  answerOptions.forEach(element => element.disabled = false);
+  answerOptions.forEach((element) => element.disabled = false);
   continueOrEndQuiz()
 })
-
-actualQuestion();
-handleChoosenAnswer()

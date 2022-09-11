@@ -8,41 +8,39 @@
   <link rel='stylesheet' type='text/css' href='../css/questions.css' />
 </head>
 <body class='right-answer-background wrong-answer-background'>
-  <form method='POST' name='quiz' id='my-form'>
+  <article method='POST' name='quiz' id='my-form'>
 
     <section class='question-section'>
       <img class='quiz-img' id='img' alt='imagem quiz.' />
       <h1 id='question'></h1>
     </section>
 
-    <div class='all-labels'>
-
+    <section class='all-labels'>
       <label for='a' class='labels'>
-        <input type='radio' name='radio' id='a' value='a' class='radios' /> 
+        <input type='radio' name='radio' id='a' value='a' class='radios' />
         <p class='parag' id='p1'>option</p>
       </label>
-  
+
       <label for='b' class='labels'>
-        <input type='radio' name='radio' id='b' value='b' class='radios' /> 
+        <input type='radio' name='radio' id='b' value='b' class='radios' />
         <p class='parag' id='p2'>option</p>
       </label>
-  
+
       <label for='c' class='labels'>
-        <input type='radio' name='radio' id='c' value='c' class='radios' /> 
+        <input type='radio' name='radio' id='c' value='c' class='radios' />
         <p class='parag' id='p3'>option</p>
       </label>
-      
-    </div>
+    </section>
 
     <div class='next-question-div'>
       <button id='next-btn' class='next-question-btn'>Choose an answer</button>
     </div>
-  </form>
+  </article>
 
   <footer class='my-footer'>
     <p class='footer-paragraph'>Made by: Joshua Hawatta.</p>
   </footer>
 
-<script src='../js/main.js' type='module'></script>
+  <script src='../js/main.js' type='module'></script>
 </body>
 </html>
