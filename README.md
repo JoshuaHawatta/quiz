@@ -2,7 +2,7 @@
 
 ## How to play?
 
-Just choose an answer to the question until you reach the end. <br/> You can restart it and try again, if you miss some!
+Just choose an answer to the question until you reach the end. <br/> You can restart and try it again, if you miss anything!
 <br/>
 
 ## What i've learned?
