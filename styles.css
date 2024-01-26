@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Quicksand';
-  src: url('../assets/fonts/Quicksand-Regular.ttf');
+  font-family: "Quicksand";
+  src: url("../assets/fonts/Quicksand-Regular.ttf");
 }
 @font-face {
   font-family: "Overpass";
@@ -22,10 +22,10 @@ html {
 }
 
 /*CHANGE_BACKGROUND_ON_JAVASCRIPT.*/
-:root{
+:root {
   --blueBackGround: #2a9df4;
   --greenBackGround: #3ddb45;
-  --redBackGround: #C21807;
+  --redBackGround: #c21807;
 }
 
 /*LAPTOP_SCREEN_SIZE...*/
@@ -38,11 +38,11 @@ body {
 }
 
 .right-answer-background {
-  background-color: var(--greenBackGround); 
+  background-color: var(--greenBackGround);
 }
 
 .wrong-answer-background {
-  background-color: var(--redBackGround); 
+  background-color: var(--redBackGround);
 }
 
 .question-section {
@@ -62,9 +62,9 @@ body {
 }
 
 .question-section > h1 {
-  font: 4rem 'Overpass', Arial, sans-serif;
+  font: 4rem "Overpass", Arial, sans-serif;
   margin: 4.5rem 0;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .all-labels {
@@ -81,7 +81,6 @@ body {
   align-items: center;
   text-align: center;
   width: 100%;
-
 }
 
 .labels > .radios {
@@ -90,7 +89,7 @@ body {
 
 .labels > .radios + p {
   margin: 0 1rem;
-  font: 2.5rem 'Quicksand', Arial, sans-serif;
+  font: 2.5rem "Quicksand", Arial, sans-serif;
   transition: all 0.2s ease;
   padding: 1rem 3rem;
   border-radius: 3rem;
@@ -100,7 +99,7 @@ body {
 
 .labels > .radios + p:hover {
   cursor: pointer;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .next-question-div {
@@ -110,7 +109,7 @@ body {
 }
 
 .next-question-btn {
-  font: 2.5rem 'Quicksand', Arial, sans-serif;
+  font: 2.5rem "Quicksand", Arial, sans-serif;
   background: none;
   border: none;
 }
@@ -119,18 +118,21 @@ body {
   cursor: pointer;
 }
 
-.my-footer {
+footer {
   display: flex;
+  align-items: center;
   justify-content: center;
   width: 100%;
   height: 11.2vh;
+  position: absolute;
+  bottom: 0;
   background-color: #1c1c55;
   padding: 2rem;
 }
 
-.my-footer > p {
-  color: #FFFFFF;
-  font: 2.5rem 'Quicksand', Arial, sans-serif;
+footer > p {
+  color: #ffffff;
+  font: 2.5rem "Quicksand", Arial, sans-serif;
 }
 
 .end-quiz-div {
@@ -142,22 +144,18 @@ body {
 }
 
 .end-quiz-div > p {
-  font: 5.5rem 'Overpass', Arial, sans-serif;
-  color: #FFFFFF;
+  font: 5.5rem "Overpass", Arial, sans-serif;
+  color: #ffffff;
   margin-bottom: 5rem;
 }
 
 .end-quiz-div > p + button {
-  font: 2rem 'Overpass', Arial, sans-serif;
+  font: 2rem "Overpass", Arial, sans-serif;
   border: none;
   cursor: pointer;
   width: 30%;
   padding: 1rem;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   color: #2a9df4;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
-
-/*DESKTOP_SCREEN_SIZE...*/
-
-/*TODO: I_ONLY_NEED_TO_CHANGE_THE_WIDTHS_OF_IMAGES_OR_FONTS_OND_THE_MEDIA_QUERYS... */
