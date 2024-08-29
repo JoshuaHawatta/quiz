@@ -13,4 +13,4 @@ const handleUpdateRadio = () =>
     option.disabled = !option.disabled;
   });
 
-export { handleNextQuestionState, handleUpdateRadio, handleUpdateRadio };
+export { handleNextQuestionState, handleUpdateRadio };
